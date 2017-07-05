@@ -12959,7 +12959,7 @@ var AllAlbums = function (_Component) {
               { className: 'col-xs-4', key: album.id },
               _react2.default.createElement(
                 _reactRouterDom.Link,
-                { to: '/albums/' + album.id },
+                { to: '/albums/' + album.id, className: 'thumbnail' },
                 _react2.default.createElement('img', { src: album.imageUrl }),
                 _react2.default.createElement(
                   'div',
