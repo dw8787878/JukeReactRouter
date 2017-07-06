@@ -33,8 +33,7 @@ export default class AllArtists extends Component {
         this.state.artists.map(artist => {
           return (
             <div className="list-group-item" key={artist.id}>
-              {/* determine where to actually Link to later! */}
-              <Link to="/artists/:artistId">{ artist.name }</Link>
+              <Link to={`/artists/${artist.id}`}>{ artist.name }</Link>
             </div>
           )
         })
@@ -44,3 +43,5 @@ export default class AllArtists extends Component {
     )
   }
 }
+
+

@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import SingleArtist from '../components/SingleArtist';
 
-export default class AllAlbums extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      albums: []
-    }
-  }
+// export default class AllAlbums extends Component {
+  // constructor (props) {
+  //   super(props);
+  //   this.state = {
+  //     albums: []
+  //   }
+  // }
 
-  componentDidMount () {
-    axios.get('/api/albums/')
-      .then(res => res.data)
-      .then(albums => {
-        this.setState({ albums })
-      });
-  }
+  // componentDidMount () {
+  //   axios.get('/api/albums/')
+  //     .then(res => res.data)
+  //     .then(albums => {
+  //       this.setState({ albums })
+  //     });
+  // }
 
-  render () {
-    const albums = this.state.albums;
-    const selectAlbum = this.props.selectAlbum;
+  export default function AllAlbums(props) {
+console.log ('------------', props)
+    const albums = props.albums;
+    const selectAlbum = props.selectAlbum;
 
     return (
       <div>
@@ -43,6 +45,6 @@ export default class AllAlbums extends Component {
         }
         </div>
       </div>
-    );
-  }
+    )
+
 }
